@@ -24,6 +24,7 @@ function App() {
           <div key={index}>
             <h2>{nft.meta.name}</h2>
             <h2>{nft.inscriptionNumber}</h2>
+            {/* unable to render images due to Third-party Cookies */}
             <img src={nft.contentURI} />
             <h4>Timestamp: {nft.listedAt}</h4>
             <h4>Listed Price: {nft.listedPrice}</h4>
