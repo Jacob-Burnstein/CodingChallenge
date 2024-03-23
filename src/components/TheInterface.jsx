@@ -5,7 +5,7 @@ import catsAPI from "../catsAPI";
 const TheInterface = () => {
   return (
     <>
-      <h1>The Interface</h1>
+      <h1>theInterface</h1>
       <h1>OMB</h1>
       {ombAPI.map((nft, index) => {
         return (

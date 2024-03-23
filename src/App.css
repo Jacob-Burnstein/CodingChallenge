@@ -4,3 +4,9 @@
   padding: 2rem;
   text-align: center;
 }
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+  cursor: pointer;
+}
