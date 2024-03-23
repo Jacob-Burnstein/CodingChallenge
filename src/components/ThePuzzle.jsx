@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import mulliganProbability from "./mulliganProbability";
 
 const ThePuzzle = () => {
+  const [hand, setHand] = useState("");
+  const [message, setMessage] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    setMessage(mulliganProbability(hand.toLowerCase()));
+  }
+
   return (
     <div>
       <h1>thePuzzle</h1>
@@ -22,11 +30,20 @@ const ThePuzzle = () => {
         <li>suit (3)</li>
         <li>nada</li>
       </ul>
-      <form>
+      <form
+        onSubmit={(e) => {
+          handleSubmit(e);
+        }}
+      >
         <label>Enter hand: </label>
-        <input type="text" placeholder="example: two pair" />
+        <input
+          type="text"
+          placeholder="example: two pair"
+          onChange={(e) => setHand(e.target.value)}
+        />
         <button type="submit">Submit</button>
       </form>
+      <p>{message}</p>
     </div>
   );
 };
