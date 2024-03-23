@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Nav from "./components/Nav";
 import ThePuzzle from "./components/ThePuzzle";
 import Footer from "./components/Footer";
+import TheDatabase from "./components/TheDatabase";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/thePuzzle" element={<ThePuzzle />} />
         <Route path="/theInterface" element={<TheInterface />} />
+        <Route path="/theDatabase" element={<TheDatabase />} />
       </Routes>
       <Footer />
     </>

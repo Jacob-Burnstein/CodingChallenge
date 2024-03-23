@@ -8,6 +8,7 @@ const Nav = () => {
       <ul className="nav">
         <li onClick={() => navigate("/thePuzzle")}>thePuzzle</li>
         <li onClick={() => navigate("/theInterface")}>theInterface</li>
+        <li onClick={() => navigate("/theDatabase")}>theDatabase</li>
       </ul>
     </div>
   );
