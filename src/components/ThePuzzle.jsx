@@ -16,7 +16,7 @@ const ThePuzzle = () => {
       <h3>Please enter your type of hand from the list below.</h3>
       <ul>
         <li>royal flush</li>
-        <li> straight</li>
+        <li>straight</li>
         <li>straight flush</li>
         <li>full house</li>
         <li>flush</li>

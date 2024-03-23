@@ -1,25 +1,3 @@
-const typesOfHands = [
-  "royal flush",
-  "straight",
-  "straight flush",
-  "full house",
-  "flush",
-  "four of a kind",
-  "two pair",
-  "three of a kind",
-  "pair",
-  // 4 sequential cards
-  "four sequence",
-  // 4 cards of the same suit
-  "four suit",
-  // 3 sequential cards
-  "sequence",
-  // 3 cards of the same suit
-  "suit",
-  // Nothing good, only a high card
-  "nada",
-];
-
 function mulliganProbability(hand) {
   let exchange = "";
   let probability = "";
@@ -64,7 +42,7 @@ function mulliganProbability(hand) {
     // Statistical likelihood to get a pair from a 5 card draw
     probability = "49:83";
   } else
-    return "Please make sure the type of hand you enter is present in the typesOfHands array";
+    return "Please make sure the type of hand you enter is present in the list";
   // Ultimately, any cards with higher values with those exchanged will technically lead to a better hand, which is why I've included 'minimum' in this return statement.
   return `With an intial draw of: ${hand}, you should exhange ${exchange} cards with a minimum ${probability} probability of improving your hand.`;
 }
