@@ -14,37 +14,39 @@ function mulliganProbability(hand) {
     hand === "three of a kind"
   ) {
     exchange = 0;
-    probability = "0:1";
+    probability = "0";
   } else if (hand === "two pair") {
     exchange = 1;
-    // 4 potential options out of 49 remaining cards
-    probability = "4:49";
+    // Reduced from 4 potential options out of 48 remaining cards
+    probability = "8.33";
   } else if (hand === "pair") {
     exchange = 3;
-    probability = "3:50";
+    probability = "6";
   } else if (hand === "four sequence") {
     exchange = 1;
-    probability = "8:51";
+    // Reduced from 8 potential options out of 48 remaining cards
+    probability = "16.67";
   } else if (hand === "four suit") {
     exchange = 1;
-    // Reduced from 9 remaining suits of 51 remaining cards
-    probability = "3:17";
+    // Reduced from 9 remaining suits of 48 remaining cards
+    probability = "18.75";
   } else if (hand === "sequence") {
     exchange = 2;
-    // 8/50 * 8/49
-    probability = "261:10000";
+    // 8/49 options * 7/48 options
+    probability = "2.38";
   } else if (hand === "suit") {
     exchange = 2;
-    // 10/50 * 9/49
-    probability = "367:1000";
+    // 10/49 options * 9/48 options
+    probability = "3.83";
   } else if (hand === "nada") {
     exchange = 5;
-    // Statistical likelihood to get a pair from a 5 card draw
-    probability = "49:83";
+    // Averaged statistical likelihood to get a pair from a 5 card draw, from ChatGBT and Gemini
+    probability = "46.50";
   } else
     return "Please make sure the type of hand you enter is present in the list";
   // Ultimately, any cards with higher values with those exchanged will technically lead to a better hand, which is why I've included 'minimum' in this return statement.
-  return `With an intial draw of: ${hand}, you should exhange ${exchange} cards with a minimum ${probability} probability of improving your hand.`;
+  // With an initial hand without a pair or better, it could also be argued that if one were not competing, and only trying to improve one's own hand, one should exchange all cards for a greater chance of getting a pair, versus risking going for a straight or a flush.
+  return `With an intial draw of: ${hand}, you should exhange ${exchange} card(s) with a minimum ${probability}% probability of improving your hand.`;
 }
 
 export default mulliganProbability;
