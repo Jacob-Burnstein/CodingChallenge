@@ -6,6 +6,8 @@ import Nav from "./components/Nav";
 import ThePuzzle from "./components/ThePuzzle";
 import Footer from "./components/Footer";
 import TheDatabase from "./components/TheDatabase";
+import OrdinalMaxiBiz from "./components/OrdinalMaxiBiz";
+import QuantumCats from "./components/QuantumCats";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/thePuzzle" element={<ThePuzzle />} />
         <Route path="/theInterface" element={<TheInterface />} />
+        <Route path="/quantumCats" element={<QuantumCats />} />
+        <Route path="/ordinalMaxiBiz" element={<OrdinalMaxiBiz />} />
         <Route path="/theDatabase" element={<TheDatabase />} />
       </Routes>
       <Footer />

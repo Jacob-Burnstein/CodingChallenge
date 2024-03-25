@@ -10,3 +10,11 @@
   padding: 0;
   cursor: pointer;
 }
+
+.databaseImg {
+  width: 800px;
+}
+
+.link {
+  cursor: pointer;
+}
