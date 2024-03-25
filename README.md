@@ -1,8 +1,7 @@
-# React + Vite
+# Finding the challenge: In browsing through Chrome dev tools, I was pretty certain that an answer lies within decrypting the encrypted text in index.js. I assumed the key was “challenge” because of the way the instructions were written: “The word challenge is operative.” Of course, the correct key was right there under the encryption. I used a free tool online to decrypt this.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 1. To solve The Puzzle, I quickly learned that AI tools don’t have consistent data on this, so I tried to isolate the problem and determine how this is different from an actual poker game. Essentially I found that there was never a statistical advantage of improving your hand unless you have less than a pair. If one has a pair or better, there is never a high probability of improving a hand. Lastly, one sure way to improve a hand is to have higher residual cards (not on a pair or two pairs for example), but if you’re not competing against anyone, that doesn’t matter. Ultimately to provide more accurate information, the user should input each card in their hand, and this function could then make better assessments on which cards to exchange.
 
-Currently, two official plugins are available:
+# 2. To solve The Interface, I use the network tab in dev tools to find the api that is used to render the NFTs. I also found the Magic Eden Api, but ran into issues regarding too many attempts to fetch data, so I determined that for this project, I should just copy and paste this API and hard code it instead. For issues I could not determine, Quantum Cats has stronger Third Party Permissions security, so I was not able to get those images.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 3. To solve The Database, I used AI to help write the initial query for the horizontal pattern, however upon several inconsistent results for the vertical pattern, I decided to write a Javascript function to at least demonstrate my logic, and hopefully then use that to write an SQL query. After more unsuccessful attempts, I decided to move on and include the first SQL query, and my Javascript logic.

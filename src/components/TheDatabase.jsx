@@ -1,4 +1,7 @@
 import React from "react";
+import sql from "src/assets/SQL.png";
+import sql from "src/assets/SQL.png";
+import js from "src/assets/JS.png";
 
 const TheDatabase = () => {
   return (
@@ -12,7 +15,7 @@ const TheDatabase = () => {
       </p>
       <img
         className="databaseImg"
-        src="src/assets/SQL.png"
+        src={sql}
         alt="SQL solution for horiztonal pattern"
       />
       <p>
@@ -22,7 +25,7 @@ const TheDatabase = () => {
       </p>
       <img
         className="databaseImg"
-        src="src/assets/JS.png"
+        src={js}
         alt="JavaScript solution for both patterns"
       />
       <h2>Part 2</h2>
